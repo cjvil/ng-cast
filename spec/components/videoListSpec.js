@@ -10,7 +10,7 @@ describe('video list', function() {
     inject(function($rootScope, $compile) {
       var scope = $rootScope.$new();
       Object.assign(scope, addToScope);
-      var element = angular.element('<video-list data-videos="videos" data-on-click="onClick"></video-list>');
+      var element = angular.element('<video-list data-videos="videos" data-on-click="selectVideo"></video-list>');
       element = $compile(element)(scope);
       $rootScope.$digest();
       callback(element);

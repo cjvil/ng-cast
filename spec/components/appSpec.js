@@ -29,9 +29,9 @@ describe('app', function() {
     expect(element.isolateScope().$ctrl.selectVideo).to.be.a('function');
   });
 
-  it('should have a searchResults function on the scope', function() {
-    expect(element.isolateScope().$ctrl.searchResults).to.exist;
-    expect(element.isolateScope().$ctrl.searchResults).to.be.a('function');
+  it('should have a getVideos function on the scope', function() {
+    expect(element.isolateScope().$ctrl.getVideos).to.exist;
+    expect(element.isolateScope().$ctrl.getVideos).to.be.a('function');
   });
 
   it('should have a videoPlaying property on the scope', function() {

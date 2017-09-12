@@ -1,5 +1,6 @@
 angular.module('video-player')
 .component('videoList', {
+
   templateUrl: 'src/templates/videoList.html',
 
   bindings: {
@@ -7,8 +8,4 @@ angular.module('video-player')
     selectVideo: '<',
   },
 
-  controller: function() {
-    // this.videos = exampleVideoData;
-    // console.log(exampleVideoData);
-  }
 });

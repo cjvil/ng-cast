@@ -7,8 +7,4 @@ angular.module('video-player')
     videoPlaying: '<',
   },
 
-  controller: function() {
-    
-
-  }
 });
