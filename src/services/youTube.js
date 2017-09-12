@@ -1,12 +1,25 @@
 angular.module('video-player')
-.service('youTube', function($scope, $http) {
+.service('youTube', function($http) {
   // TODO
-  this.search = function (searchQuery) {
+  // this.inject($http);
 
+  this.search = function (searchQuery) {
+    searchQuery = 'dogs';
+
+    var params = {
+      q: 'dogs',
+      part: 'snippet',
+      maxResults: 5,
+      key: window.YOUTUBE_API_KEY,
+      videoEmbeddable: 'true',
+      type: 'video'
+    };
+  
     $http({
       method: 'GET',
-      url: `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_API_KEY}&part=snippet,id&q=${searchQuery}&maxResults=5`
-
+      url: 'https://www.googleapis.com/youtube/v3/search',
+      params: params
+      // url: `https://www.googleapis.com/youtube/v3/search?key=${window.YOUTUBE_API_KEY}&part=snippet,id&q=${searchQuery}&maxResults=5`
     }).then(function successCallback(response) {
       console.log('success');
     // this callback will be called asynchronously

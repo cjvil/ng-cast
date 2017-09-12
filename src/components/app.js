@@ -1,7 +1,7 @@
 angular.module('video-player')
 
 .component('app', {
-  controller: function($scope, youTube) {
+  controller: function(youTube) {
     this.videos = exampleVideoData;
     this.videoPlaying = exampleVideoData[0];
 
