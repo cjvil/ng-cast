@@ -4,12 +4,7 @@ angular.module('video-player')
 
   bindings: {
     getVideos: '<',
-  },
-
-  controller: function(youTube) {
-    this.result = function(query) {
-      youTube.search(query, this.getVideos);
-    };
+    result: '<'
   },
 
   templateUrl: 'src/templates/search.html'
