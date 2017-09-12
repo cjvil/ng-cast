@@ -8,8 +8,7 @@ angular.module('video-player')
   },
 
   controller: function() {
-    debugger;
-    // this.video = exampleVideoData[0];
-    console.log(this.videoPlaying, 'this.video');
+    
+
   }
 });
