@@ -24,9 +24,9 @@ angular.module('video-player')
     this.selectVideo = this.selectVideo.bind(this);  
 
 
-    this.searchResults = function() {
-      
-    };
+    // this.searchResults = function() {
+    //   youTube.search(, this.getVideos);
+    // };
 
   },
 
