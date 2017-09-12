@@ -3,11 +3,9 @@ angular.module('video-player')
   // TODO
   // this.inject($http);
 
-  this.search = function (searchQuery) {
-    searchQuery = 'dogs';
-
+  this.search = function (searchQuery, callback) {
     var params = {
-      q: 'dogs',
+      q: searchQuery,
       part: 'snippet',
       maxResults: 5,
       key: window.YOUTUBE_API_KEY,
@@ -22,6 +20,7 @@ angular.module('video-player')
       // url: `https://www.googleapis.com/youtube/v3/search?key=${window.YOUTUBE_API_KEY}&part=snippet,id&q=${searchQuery}&maxResults=5`
     }).then(function successCallback(response) {
       console.log('success');
+      callback(response.data.items);
     // this callback will be called asynchronously
     // when the response is available
     }, function errorCallback(response) {
