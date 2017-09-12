@@ -1,7 +1,7 @@
 angular.module('video-player')
 
 .component('app', {
-  controller: function() {
+  controller: function($scope, youTube) {
     this.videos = exampleVideoData;
     this.videoPlaying = exampleVideoData[0];
 
@@ -11,10 +11,12 @@ angular.module('video-player')
 
     this.selectVideo = this.selectVideo.bind(this);
 
+    youTube.search();
+
     this.searchResults = function() {
       
-
     };
+
   },
 
   templateUrl: 'src/templates/app.html',

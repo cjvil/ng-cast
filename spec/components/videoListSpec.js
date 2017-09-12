@@ -24,10 +24,10 @@ describe('video list', function() {
     });
   });
 
-  it('should have an onClick function on the scope', function() {
-    createVideoListElement({ onClick: function () {} }, function(element) {
-      expect(element.isolateScope().$ctrl.onClick).to.exist;
-      expect(element.isolateScope().$ctrl.onClick).to.be.a('function');
+  it('should have an selectVideo function on the scope', function() {
+    createVideoListElement({ selectVideo: function () {} }, function(element) {
+      expect(element.isolateScope().$ctrl.selectVideo).to.exist;
+      expect(element.isolateScope().$ctrl.selectVideo).to.be.a('function');
     });
   });
 
