@@ -5,8 +5,15 @@ angular.module('video-player')
     this.videos = exampleVideoData;
     this.videoPlaying = exampleVideoData[0];
 
-    this.selectVideo = function() {
-      console.log('clicked');
+    this.selectVideo = function(video) {
+      this.videoPlaying = video;
+    };
+
+    this.selectVideo = this.selectVideo.bind(this);
+
+    this.searchResults = function() {
+      
+
     };
   },
 
